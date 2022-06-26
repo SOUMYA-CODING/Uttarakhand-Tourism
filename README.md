@@ -1,16 +1,8 @@
 # travel_app
 
-Tourism and Travel App
+Smart India Hackathon project
+Travel and tourism (Government of Uttarakhand) :-
+Tourism is a major source of income for the state of Uttarakhand. To give it further boost, the Govt wants to create a tourist friendly application which will have the details of all the char dham and other important places present in the state. The application should also help tourists get local information regarding availability of stay and lodging at partner hotels.Objective:Application to get info about important places and char dham.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Tech :- 
+Flutter, HTML, CSS, JavaScript, Bootstrap, Django REST Framework(API)
