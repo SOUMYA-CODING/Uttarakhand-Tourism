@@ -1,9 +1,11 @@
 import 'dart:async';
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_app/authentication_section/authentication_screen.dart';
 
-/* StartScreen */
+// StartScreen
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -18,8 +20,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(
         const Duration(seconds: 3),
-        () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => WelcomeScreen())));
+        () => Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => const WelcomeScreen())));
   }
 
   @override
@@ -77,7 +79,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 }
 
-/* Welcome Screen */
+// Welcome Screen
+
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
@@ -87,7 +90,7 @@ class WelcomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(20.0),
           width: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
@@ -98,7 +101,55 @@ class WelcomeScreen extends StatelessWidget {
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [],
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const Text(
+                'Explore the beauty of the Uttarakhand!',
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 46.0,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              const SizedBox(
+                width: 300.0,
+                child: Text(
+                  'Find many tourist destination ready for you to visit.',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginScreen()));
+                  },
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.blueAccent),
+                    padding:
+                        MaterialStateProperty.all(const EdgeInsets.all(20.0)),
+                  ),
+                  child: const Icon(
+                    CupertinoIcons.arrow_right,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
