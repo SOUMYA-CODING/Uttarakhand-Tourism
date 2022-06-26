@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_app/authentication_section/authentication_screen.dart';
@@ -34,11 +32,11 @@ class _SplashScreenState extends State<SplashScreen> {
           decoration: const BoxDecoration(
             color: Color(0xff2C3E50),
             image: DecorationImage(
-                image: AssetImage('assets/img_one.png'),
-                fit: BoxFit.cover,
-                repeat: ImageRepeat.noRepeat,
-                colorFilter:
-                    ColorFilter.mode(Colors.black12, BlendMode.dstATop)),
+              image: AssetImage('assets/img_one.png'),
+              fit: BoxFit.cover,
+              repeat: ImageRepeat.noRepeat,
+              colorFilter: ColorFilter.mode(Colors.black12, BlendMode.dstATop),
+            ),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -80,7 +78,6 @@ class _SplashScreenState extends State<SplashScreen> {
 }
 
 // Welcome Screen
-
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
