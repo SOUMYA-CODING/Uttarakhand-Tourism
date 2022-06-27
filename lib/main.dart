@@ -10,7 +10,8 @@ void main() {
       routes: {
         '/': (context) => const SplashScreen(),
         '/welcome_screen': (context) => const WelcomeScreen(),
-        '/login_screen': (context) => const LoginScreen()
+        '/login_screen': (context) => const LoginScreen(),
+        '/registration_screen': (context) => const RegistrationScreen(),
       },
     ),
   );
