@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -408,6 +410,110 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         ),
                       ),
                     ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// OTP Screen
+class OtpScreen extends StatefulWidget {
+  const OtpScreen({Key? key}) : super(key: key);
+
+  @override
+  State<OtpScreen> createState() => _OtpScreenState();
+}
+
+class _OtpScreenState extends State<OtpScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            color: Color(0xFF000000),
+            image: DecorationImage(
+              image: AssetImage('assets/img_three.jpg'),
+              fit: BoxFit.cover,
+              repeat: ImageRepeat.noRepeat,
+              colorFilter: ColorFilter.mode(
+                  Color.fromRGBO(255, 255, 255, 0.4), BlendMode.dstATop),
+            ),
+          ),
+          child: Form(
+            child: Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'Verify your Identify',
+                    style: GoogleFonts.getFont('Alfa Slab One',
+                        color: Colors.white, fontSize: 26.0),
+                  ),
+                  const SizedBox(
+                    height: 15.0,
+                  ),
+                  TextFormField(
+                    textInputAction: TextInputAction.done,
+                    keyboardType: TextInputType.text,
+                    decoration: const InputDecoration(
+                      hintText: "Full name",
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      prefixIcon: Icon(
+                        CupertinoIcons.mail_solid,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 25.0,
+                  ),
+                  TextFormField(
+                    textInputAction: TextInputAction.done,
+                    keyboardType: TextInputType.text,
+                    decoration: const InputDecoration(
+                      hintText: "Email ID",
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      prefixIcon: Icon(
+                        CupertinoIcons.mail_solid,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 25.0,
+                  ),
+                  TextFormField(
+                    textInputAction: TextInputAction.done,
+                    keyboardType: TextInputType.visiblePassword,
+                    decoration: const InputDecoration(
+                      hintText: "Password",
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      prefixIcon: Icon(
+                        CupertinoIcons.padlock_solid,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  const SizedBox(
+                    height: 20.0,
                   ),
                 ],
               ),
