@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -395,7 +393,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const LoginScreen()));
+                                  builder: (context) => const OtpScreen()));
                         },
                         style: ButtonStyle(
                           backgroundColor:
@@ -454,66 +452,37 @@ class _OtpScreenState extends State<OtpScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text(
-                    'Verify your Identify',
+                    'Verify your\n Identify',
                     style: GoogleFonts.getFont('Alfa Slab One',
                         color: Colors.white, fontSize: 26.0),
                   ),
                   const SizedBox(
-                    height: 15.0,
+                    height: 10.0,
                   ),
-                  TextFormField(
-                    textInputAction: TextInputAction.done,
-                    keyboardType: TextInputType.text,
-                    decoration: const InputDecoration(
-                      hintText: "Full name",
-                      hintStyle: TextStyle(
-                        color: Colors.grey,
-                      ),
-                      prefixIcon: Icon(
-                        CupertinoIcons.mail_solid,
-                        color: Colors.white,
-                      ),
+                  const Text(
+                    'We have just send a verification code to your email',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.0,
                     ),
                   ),
                   const SizedBox(
-                    height: 25.0,
+                    height: 35.0,
                   ),
-                  TextFormField(
-                    textInputAction: TextInputAction.done,
-                    keyboardType: TextInputType.text,
-                    decoration: const InputDecoration(
-                      hintText: "Email ID",
-                      hintStyle: TextStyle(
-                        color: Colors.grey,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      TextFormField(
+                        textInputAction: TextInputAction.done,
+                        keyboardType: TextInputType.visiblePassword,
+                        decoration: const InputDecoration(
+                          hintText: "Password",
+                          hintStyle: TextStyle(
+                            color: Colors.grey,
+                          ),
+                        ),
                       ),
-                      prefixIcon: Icon(
-                        CupertinoIcons.mail_solid,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 25.0,
-                  ),
-                  TextFormField(
-                    textInputAction: TextInputAction.done,
-                    keyboardType: TextInputType.visiblePassword,
-                    decoration: const InputDecoration(
-                      hintText: "Password",
-                      hintStyle: TextStyle(
-                        color: Colors.grey,
-                      ),
-                      prefixIcon: Icon(
-                        CupertinoIcons.padlock_solid,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20.0,
-                  ),
-                  const SizedBox(
-                    height: 20.0,
+                    ],
                   ),
                 ],
               ),

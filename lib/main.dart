@@ -12,6 +12,7 @@ void main() {
         '/welcome_screen': (context) => const WelcomeScreen(),
         '/login_screen': (context) => const LoginScreen(),
         '/registration_screen': (context) => const RegistrationScreen(),
+        '/otp_screen': (context) => const OtpScreen(),
       },
     ),
   );
