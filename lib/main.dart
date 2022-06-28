@@ -14,6 +14,8 @@ void main() {
         '/registration_screen': (context) => const RegistrationScreen(),
         '/otp_screen': (context) => const OtpScreen(),
         '/account_setup_screen': (context) => const AccountSetupScreen(),
+        '/complete_registration_screen': (context) =>
+            const CompleteRegistrationScreen(),
       },
     ),
   );

@@ -197,7 +197,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      const AccountSetupScreen()));
+                                      const CompleteRegistrationScreen()));
                         },
                         style: ButtonStyle(
                           backgroundColor:
@@ -433,7 +433,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const OtpScreen()));
+                                  builder: (context) =>
+                                      const CompleteRegistrationScreen()));
                         },
                         style: ButtonStyle(
                           backgroundColor:
@@ -626,7 +627,42 @@ class _AccountSetupScreenState extends State<AccountSetupScreen> {
                     ),
                   ),
                   const SizedBox(
-                    height: 45.0,
+                    height: 20.0,
+                  ),
+                  const Center(
+                    child: InkWell(
+                      child: CircleAvatar(
+                        backgroundColor: Color(0xFF928DAB),
+                        radius: 60.0,
+                        child: Center(
+                          child: Icon(
+                            CupertinoIcons.person_solid,
+                            color: Colors.white,
+                            size: 35.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 25.0,
+                  ),
+                  TextFormField(
+                    textInputAction: TextInputAction.done,
+                    keyboardType: TextInputType.text,
+                    decoration: const InputDecoration(
+                      hintText: "Username",
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      prefixIcon: Icon(
+                        CupertinoIcons.person_solid,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 60.0,
                   ),
                   SizedBox(
                     height: 50.0,
@@ -644,6 +680,122 @@ class _AccountSetupScreenState extends State<AccountSetupScreen> {
                       ),
                       child: const Text(
                         'Setup',
+                        style: TextStyle(
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// Complete Registration Screen
+class CompleteRegistrationScreen extends StatefulWidget {
+  const CompleteRegistrationScreen({Key? key}) : super(key: key);
+
+  @override
+  State<CompleteRegistrationScreen> createState() =>
+      _CompleteRegistrationScreenState();
+}
+
+class _CompleteRegistrationScreenState
+    extends State<CompleteRegistrationScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            color: Color(0xFF000000),
+            image: DecorationImage(
+              image: AssetImage('assets/img_three.jpg'),
+              fit: BoxFit.cover,
+              repeat: ImageRepeat.noRepeat,
+              colorFilter: ColorFilter.mode(
+                  Color.fromRGBO(255, 255, 255, 0.4), BlendMode.dstATop),
+            ),
+          ),
+          child: Form(
+            child: Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'Registration\n Complete!',
+                    style: GoogleFonts.getFont('Alfa Slab One',
+                        color: Colors.white, fontSize: 26.0),
+                  ),
+                  const SizedBox(
+                    height: 5.0,
+                  ),
+                  const Text(
+                    'You have successfully created\n your account',
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 45.0,
+                  ),
+                  const Center(
+                    child: InkWell(
+                      child: CircleAvatar(
+                        backgroundColor: Color(0xFF928DAB),
+                        radius: 60.0,
+                        child: Center(
+                          child: Icon(
+                            CupertinoIcons.person_solid,
+                            color: Colors.white,
+                            size: 35.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5.0,
+                  ),
+                  Center(
+                    child: Text(
+                      'Sam',
+                      style: GoogleFonts.getFont(
+                        'Alfa Slab One',
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 65.0,
+                  ),
+                  SizedBox(
+                    height: 50.0,
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(const Color(0xFF4286F4)),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                      child: const Text(
+                        "Let's Explore",
                         style: TextStyle(
                           fontSize: 18.0,
                         ),
