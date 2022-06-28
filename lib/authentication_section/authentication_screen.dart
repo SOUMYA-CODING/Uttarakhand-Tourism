@@ -86,6 +86,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(const Color(0xFF4286F4)),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
                       ),
                       child: const Text(
                         'Login',
@@ -122,6 +127,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                                 const Color(0xFFD8D8D8).withOpacity(0.4)),
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                            ),
                           ),
                           child: const FaIcon(
                             FontAwesomeIcons.google,
@@ -136,6 +146,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                                 const Color(0xFFD8D8D8).withOpacity(0.4)),
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                            ),
                           ),
                           child: const FaIcon(
                             FontAwesomeIcons.facebook,
@@ -150,6 +165,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                                 const Color(0xFFD8D8D8).withOpacity(0.4)),
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                            ),
                           ),
                           child: const FaIcon(
                             FontAwesomeIcons.twitter,
@@ -303,6 +323,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(const Color(0xFF4286F4)),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
                       ),
                       child: const Text(
                         'Register',
@@ -339,6 +364,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                                 const Color(0xFFD8D8D8).withOpacity(0.4)),
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                            ),
                           ),
                           child: const FaIcon(
                             FontAwesomeIcons.google,
@@ -353,6 +383,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                                 const Color(0xFFD8D8D8).withOpacity(0.4)),
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                            ),
                           ),
                           child: const FaIcon(
                             FontAwesomeIcons.facebook,
@@ -367,6 +402,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                                 const Color(0xFFD8D8D8).withOpacity(0.4)),
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                            ),
                           ),
                           child: const FaIcon(
                             FontAwesomeIcons.twitter,
@@ -431,6 +471,7 @@ class _OtpScreenState extends State<OtpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Container(
           width: double.infinity,
@@ -452,37 +493,79 @@ class _OtpScreenState extends State<OtpScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text(
-                    'Verify your\n Identify',
+                    'Verify Your\n Identify',
                     style: GoogleFonts.getFont('Alfa Slab One',
                         color: Colors.white, fontSize: 26.0),
                   ),
                   const SizedBox(
-                    height: 10.0,
+                    height: 5.0,
                   ),
                   const Text(
                     'We have just send a verification code to your email',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.grey,
                       fontSize: 16.0,
                     ),
                   ),
                   const SizedBox(
-                    height: 35.0,
+                    height: 45.0,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TextFormField(
-                        textInputAction: TextInputAction.done,
-                        keyboardType: TextInputType.visiblePassword,
-                        decoration: const InputDecoration(
-                          hintText: "Password",
-                          hintStyle: TextStyle(
-                            color: Colors.grey,
+                  TextFormField(
+                    textInputAction: TextInputAction.done,
+                    keyboardType: TextInputType.text,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Colors.greenAccent, width: 5.0),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 50.0,
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(const Color(0xFF4286F4)),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
                       ),
-                    ],
+                      child: const Text(
+                        'Verification',
+                        style: TextStyle(
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 18.0,
+                  ),
+                  const Center(
+                    child: Text(
+                      'By registering you agree to our',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5.0,
+                  ),
+                  const Center(
+                    child: Text(
+                      'Terms and Conditions',
+                      style: TextStyle(
+                        color: Color(0xFFE3CF18),
+                        fontSize: 16.0,
+                      ),
+                    ),
                   ),
                 ],
               ),

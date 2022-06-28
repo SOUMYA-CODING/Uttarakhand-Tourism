@@ -139,6 +139,11 @@ class WelcomeScreen extends StatelessWidget {
                         MaterialStateProperty.all(Colors.blueAccent),
                     padding:
                         MaterialStateProperty.all(const EdgeInsets.all(20.0)),
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
                   ),
                   child: const Icon(
                     CupertinoIcons.arrow_right,
