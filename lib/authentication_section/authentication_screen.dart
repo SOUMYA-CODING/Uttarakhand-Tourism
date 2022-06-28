@@ -197,7 +197,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      const RegistrationScreen()));
+                                      const AccountSetupScreen()));
                         },
                         style: ButtonStyle(
                           backgroundColor:
@@ -564,6 +564,89 @@ class _OtpScreenState extends State<OtpScreen> {
                       style: TextStyle(
                         color: Color(0xFFE3CF18),
                         fontSize: 16.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// Account Setup Screen
+class AccountSetupScreen extends StatefulWidget {
+  const AccountSetupScreen({Key? key}) : super(key: key);
+
+  @override
+  State<AccountSetupScreen> createState() => _AccountSetupScreenState();
+}
+
+class _AccountSetupScreenState extends State<AccountSetupScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            color: Color(0xFF000000),
+            image: DecorationImage(
+              image: AssetImage('assets/img_three.jpg'),
+              fit: BoxFit.cover,
+              repeat: ImageRepeat.noRepeat,
+              colorFilter: ColorFilter.mode(
+                  Color.fromRGBO(255, 255, 255, 0.4), BlendMode.dstATop),
+            ),
+          ),
+          child: Form(
+            child: Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'Account\n Setup',
+                    style: GoogleFonts.getFont('Alfa Slab One',
+                        color: Colors.white, fontSize: 26.0),
+                  ),
+                  const SizedBox(
+                    height: 5.0,
+                  ),
+                  const Text(
+                    'Complete your account setup by uploading profile picture ans setup your username',
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 45.0,
+                  ),
+                  SizedBox(
+                    height: 50.0,
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(const Color(0xFF4286F4)),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                      child: const Text(
+                        'Setup',
+                        style: TextStyle(
+                          fontSize: 18.0,
+                        ),
                       ),
                     ),
                   ),
