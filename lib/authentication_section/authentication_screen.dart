@@ -519,6 +519,11 @@ class _OtpScreenState extends State<OtpScreen> {
                         height: 68.0,
                         width: 64.0,
                         child: TextField(
+                          onChanged: (value) {
+                            if (value.length == 1) {
+                              FocusScope.of(context).nextFocus();
+                            }
+                          },
                           style: const TextStyle(
                             color: Colors.white,
                           ),
@@ -545,6 +550,11 @@ class _OtpScreenState extends State<OtpScreen> {
                         height: 68.0,
                         width: 64.0,
                         child: TextField(
+                          onChanged: (value) {
+                            if (value.length == 1) {
+                              FocusScope.of(context).nextFocus();
+                            }
+                          },
                           style: const TextStyle(
                             color: Colors.white,
                           ),
@@ -571,6 +581,11 @@ class _OtpScreenState extends State<OtpScreen> {
                         height: 68.0,
                         width: 64.0,
                         child: TextField(
+                          onChanged: (value) {
+                            if (value.length == 1) {
+                              FocusScope.of(context).nextFocus();
+                            }
+                          },
                           style: const TextStyle(
                             color: Colors.white,
                           ),
