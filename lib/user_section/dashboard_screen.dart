@@ -77,12 +77,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   color: Colors.grey,
                 ),
                 decoration: InputDecoration(
+                  contentPadding: EdgeInsets.all(20.0),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   ),
                   hintText: 'Location..',
-                  suffixIcon: FaIcon(
-                    FontAwesomeIcons.magnifyingGlass,
+                  suffixIcon: Icon(
+                    Icons.search,
                     color: Colors.black,
                   ),
                 ),
