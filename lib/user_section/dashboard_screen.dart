@@ -17,15 +17,17 @@ class _DashboardScreenState extends State<DashboardScreen> {
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    width: 40.0,
-                    height: 40.0,
+                    width: 45.0,
+                    height: 45.0,
                     decoration: const BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey,
@@ -39,8 +41,51 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         FontAwesomeIcons.bars,
                       ),
                     ),
-                  )
+                  ),
+                  Container(
+                    width: 45.0,
+                    height: 45.0,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF000000),
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                      image: DecorationImage(
+                        image: NetworkImage(
+                            'https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg'),
+                        fit: BoxFit.cover,
+                        repeat: ImageRepeat.noRepeat,
+                      ),
+                    ),
+                  ),
                 ],
+              ),
+              const SizedBox(
+                height: 30.0,
+              ),
+              const Text(
+                'Hello, Sam !',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(
+                height: 15.0,
+              ),
+              const TextField(
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  ),
+                  hintText: 'Location..',
+                  suffixIcon: FaIcon(
+                    FontAwesomeIcons.magnifyingGlass,
+                    color: Colors.black,
+                  ),
+                ),
               ),
             ],
           ),
