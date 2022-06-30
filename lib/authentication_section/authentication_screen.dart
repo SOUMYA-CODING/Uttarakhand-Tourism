@@ -320,7 +320,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     height: 50.0,
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const DashboardScreen()));
+                      },
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(const Color(0xFF4286F4)),
@@ -435,7 +440,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      const CompleteRegistrationScreen()));
+                                      const DashboardScreen()));
                         },
                         style: ButtonStyle(
                           backgroundColor:
