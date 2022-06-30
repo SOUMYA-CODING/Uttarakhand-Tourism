@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_app/authentication_section/authentication_screen.dart';
+import 'package:travel_app/user_section/dashboard_screen.dart';
 
 // StartScreen
 class SplashScreen extends StatefulWidget {
@@ -132,7 +133,7 @@ class WelcomeScreen extends StatelessWidget {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const LoginScreen()));
+                            builder: (context) => const DashboardScreen()));
                   },
                   style: ButtonStyle(
                     backgroundColor:

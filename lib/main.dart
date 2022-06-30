@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/authentication_section/authentication_screen.dart';
 import 'package:travel_app/starter_section/start_screen.dart';
+import 'package:travel_app/user_section/dashboard_screen.dart';
 
 void main() {
   runApp(
@@ -16,6 +17,7 @@ void main() {
         '/account_setup_screen': (context) => const AccountSetupScreen(),
         '/complete_registration_screen': (context) =>
             const CompleteRegistrationScreen(),
+        '/dashboard_screen': (context) => const DashboardScreen(),
       },
     ),
   );
