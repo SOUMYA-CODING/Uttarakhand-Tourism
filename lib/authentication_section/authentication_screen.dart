@@ -198,7 +198,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const OtpScreen()));
+                                  builder: (context) =>
+                                      const RegistrationScreen()));
                         },
                         style: ButtonStyle(
                           backgroundColor:
@@ -439,8 +440,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      const DashboardScreen()));
+                                  builder: (context) => const OtpScreen()));
                         },
                         style: ButtonStyle(
                           backgroundColor:
@@ -648,7 +648,13 @@ class _OtpScreenState extends State<OtpScreen> {
                     height: 50.0,
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const AccountSetupScreen()));
+                      },
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(const Color(0xFF4286F4)),
@@ -791,7 +797,13 @@ class _AccountSetupScreenState extends State<AccountSetupScreen> {
                     height: 50.0,
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const CompleteRegistrationScreen()));
+                      },
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(const Color(0xFF4286F4)),
