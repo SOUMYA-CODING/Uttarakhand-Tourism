@@ -88,6 +88,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                 ),
               ),
+              const SizedBox(
+                height: 15.0,
+              ),
+              Container(
+                height: 150.0,
+                width: double.infinity,
+                child: ListView(
+                  children: [
+                    Card(),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
