@@ -98,6 +98,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     Card(
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
@@ -110,6 +111,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ),
                     ),
                     Card(
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
@@ -122,6 +124,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ),
                     ),
                     Card(
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
@@ -132,7 +135,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         width: 260.0,
                         fit: BoxFit.cover,
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
