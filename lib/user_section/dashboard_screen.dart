@@ -91,12 +91,48 @@ class _DashboardScreenState extends State<DashboardScreen> {
               const SizedBox(
                 height: 15.0,
               ),
-              Container(
+              SizedBox(
                 height: 150.0,
                 width: double.infinity,
                 child: ListView(
+                  scrollDirection: Axis.horizontal,
                   children: [
-                    Card(),
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: Ink.image(
+                        image: const NetworkImage(
+                            'https://static.toiimg.com/thumb/msid-90946619,imgsize-190588,width-400,resizemode-4/90946619.jpg'),
+                        height: 110.0,
+                        width: 260.0,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: Ink.image(
+                        image: const NetworkImage(
+                            'https://static.toiimg.com/thumb/msid-90946619,imgsize-190588,width-400,resizemode-4/90946619.jpg'),
+                        height: 110.0,
+                        width: 260.0,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: Ink.image(
+                        image: const NetworkImage(
+                            'https://static.toiimg.com/thumb/msid-90946619,imgsize-190588,width-400,resizemode-4/90946619.jpg'),
+                        height: 110.0,
+                        width: 260.0,
+                        fit: BoxFit.cover,
+                      ),
+                    )
                   ],
                 ),
               ),
